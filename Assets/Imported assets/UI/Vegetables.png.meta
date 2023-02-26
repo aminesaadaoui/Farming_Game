@@ -138,10 +138,10 @@ TextureImporter:
       name: Vegetables_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 192
-        width: 28
-        height: 31
+        x: 4
+        y: 195
+        width: 23
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,10 +159,10 @@ TextureImporter:
       name: Vegetables_1
       rect:
         serializedVersion: 2
-        x: 36
-        y: 192
-        width: 24
-        height: 32
+        x: 37
+        y: 197
+        width: 23
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,10 +180,10 @@ TextureImporter:
       name: Vegetables_2
       rect:
         serializedVersion: 2
-        x: 68
+        x: 73
         y: 195
-        width: 23
-        height: 23
+        width: 13
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,9 +202,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 100
-        y: 194
-        width: 26
-        height: 25
+        y: 197
+        width: 24
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,10 +222,10 @@ TextureImporter:
       name: Vegetables_4
       rect:
         serializedVersion: 2
-        x: 7
-        y: 160
-        width: 22
-        height: 30
+        x: 5
+        y: 164
+        width: 23
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,9 +244,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 38
-        y: 164
-        width: 22
-        height: 22
+        y: 165
+        width: 20
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,10 +264,10 @@ TextureImporter:
       name: Vegetables_6
       rect:
         serializedVersion: 2
-        x: 68
-        y: 163
-        width: 25
-        height: 26
+        x: 70
+        y: 164
+        width: 24
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -285,10 +285,10 @@ TextureImporter:
       name: Vegetables_7
       rect:
         serializedVersion: 2
-        x: 103
-        y: 166
-        width: 19
-        height: 19
+        x: 100
+        y: 164
+        width: 26
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,10 +306,10 @@ TextureImporter:
       name: Vegetables_8
       rect:
         serializedVersion: 2
-        x: 4
-        y: 129
-        width: 25
-        height: 29
+        x: 7
+        y: 133
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,10 +327,10 @@ TextureImporter:
       name: Vegetables_9
       rect:
         serializedVersion: 2
-        x: 34
-        y: 129
-        width: 27
-        height: 30
+        x: 40
+        y: 138
+        width: 17
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -348,10 +348,10 @@ TextureImporter:
       name: Vegetables_10
       rect:
         serializedVersion: 2
-        x: 68
-        y: 132
-        width: 27
-        height: 24
+        x: 67
+        y: 131
+        width: 26
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -369,10 +369,10 @@ TextureImporter:
       name: Vegetables_11
       rect:
         serializedVersion: 2
-        x: 106
-        y: 136
-        width: 14
-        height: 14
+        x: 100
+        y: 133
+        width: 21
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,9 +391,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 11
-        y: 73
-        width: 46
-        height: 43
+        y: 79
+        width: 45
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -411,10 +411,10 @@ TextureImporter:
       name: Vegetables_13
       rect:
         serializedVersion: 2
-        x: 76
-        y: 75
+        x: 78
+        y: 82
         width: 36
-        height: 46
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -432,10 +432,10 @@ TextureImporter:
       name: Vegetables_14
       rect:
         serializedVersion: 2
-        x: 21
-        y: 8
-        width: 23
-        height: 51
+        x: 9
+        y: 16
+        width: 46
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -453,10 +453,10 @@ TextureImporter:
       name: Vegetables_15
       rect:
         serializedVersion: 2
-        x: 72
-        y: 15
-        width: 35
-        height: 38
+        x: 76
+        y: 19
+        width: 39
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -473,7 +473,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 732b9dd848cb68847a1189601c397609
     internalID: 0
     vertices: []
     indices: 

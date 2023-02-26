@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Cabbage
   m_EditorClassIdentifier: 
   description: A leafy green vegetable
-  thumbnail: {fileID: 0}
+  thumbnail: {fileID: 8242820234695673801, guid: 968d42e8c5f10dd4a97ffde417bcde7e,
+    type: 3}
   gameModel: {fileID: 0}

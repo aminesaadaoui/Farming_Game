@@ -58,6 +58,8 @@
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Inventory\EquipmentData.cs" />
      <Compile Include="Assets\Scripts\Inventory\ItemData.cs" />
+     <Compile Include="Assets\Scripts\Inventory\SeedData.cs" />
+     <Compile Include="Assets\Scripts\InventoryManager.cs" />
      <Compile Include="Assets\Scripts\Land.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerInteraction.cs" />
@@ -619,6 +621,10 @@
       <Project>{9746B8BC-A0DC-EB89-DC1F-FDB6EAD3FE29}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
+      <Project>{C2FC93CC-25B4-E4BD-430F-8393EC708908}</Project>
+      <Name>Unity.2D.Sprite.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{56C46539-41DE-A70E-D764-7ADBCC1A323A}</Project>
       <Name>Unity.TextMeshPro</Name>
@@ -626,10 +632,6 @@
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{FA50EBFF-65DF-B2FA-B4A5-D8B8FC11BA7D}</Project>
       <Name>UnityEditor.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{C2FC93CC-25B4-E4BD-430F-8393EC708908}</Project>
-      <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
