@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Inventory\EquipmentData.cs" />
      <Compile Include="Assets\Scripts\Inventory\ItemData.cs" />
      <Compile Include="Assets\Scripts\Land.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
@@ -625,6 +626,10 @@
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{FA50EBFF-65DF-B2FA-B4A5-D8B8FC11BA7D}</Project>
       <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
+      <Project>{C2FC93CC-25B4-E4BD-430F-8393EC708908}</Project>
+      <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
