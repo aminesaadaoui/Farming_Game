@@ -85,6 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 525830838916910365}
   - component: {fileID: 5368053559267502128}
+  - component: {fileID: 5330789727131651526}
   - component: {fileID: 4125769228880326929}
   m_Layer: 0
   m_Name: Inventory Slot
@@ -121,6 +122,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575368200692337200}
   m_CullTransparentMesh: 0
+--- !u!114 &5330789727131651526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575368200692337200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0da3f36911c8c2429df4305b477297d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDisplayImage: {fileID: 640200134}
 --- !u!114 &4125769228880326929
 MonoBehaviour:
   m_ObjectHideFlags: 0

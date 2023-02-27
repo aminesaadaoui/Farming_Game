@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22fe620a9d2edbc4cbc171e76beb222a, type: 3}
   m_Name: Pickaxe
   m_EditorClassIdentifier: 
-  description: 
+  description: for clearing Rock obstacles
   thumbnail: {fileID: 8654109781666654699, guid: 7ed15c24da27b04428e5778da555cc97,
     type: 3}
   gameModel: {fileID: 0}
