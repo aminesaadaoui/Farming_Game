@@ -10,6 +10,13 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public Image itemDisplayImage;
 
+    public enum InventoryType
+    {
+        Item, Tool
+    }
+
+    public InventoryType inventoryType;
+
     public void Display(ItemData itemToDisplay)
     {
         if(itemToDisplay != null)
@@ -24,6 +31,14 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         itemDisplayImage.gameObject.SetActive(false);
 
     }
+
+
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+
+    }
+   
 
     public void OnPointerEnter(PointerEventData eventData)
     {

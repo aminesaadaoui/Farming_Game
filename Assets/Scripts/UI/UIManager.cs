@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; }
+    [Header("Status Bar")]
+    public Image toolEquipSlot;
 
     [Header("Inventory System")]
     public GameObject inventoryPanel;
@@ -42,6 +44,18 @@ public class UIManager : MonoBehaviour
         RenderInventoryPanel(inventoryToolSlots, toolSlots);
 
         RenderInventoryPanel(inventoryItemSlots, itemSlots);
+
+        ItemData equippedTool = InventoryManager.Instance.equippedTool; 
+
+        if (equippedTool != null)
+        {
+            toolEquipSlot.sprite = equippedTool.thumbnail;
+            
+            toolEquipSlot.gameObject.SetActive(true);
+
+            return;
+        }
+        toolEquipSlot.gameObject.SetActive(false);
     }
 
     void RenderInventoryPanel(ItemData[] slots, InventorySlot[] uiSlots)

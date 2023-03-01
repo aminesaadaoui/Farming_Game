@@ -24,6 +24,21 @@ public class InventoryManager : MonoBehaviour
     [Header("Items")]
     public ItemData[] items = new ItemData[8];
     public ItemData equippedItem = null;
+
+
+    public void InventoryToHand()
+    {
+
+    }
+
+
+    public void HandToInventory()
+    {
+
+    }
+
+
+
     // Start is called before the first frame update
     void Start()
     {
