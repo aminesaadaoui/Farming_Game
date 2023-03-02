@@ -11,7 +11,15 @@ public class UIManager : MonoBehaviour
 
     [Header("Inventory System")]
     public GameObject inventoryPanel;
+
+    public HandInventorySlot toolHandSlot;
+
+
     public InventorySlot[] toolSlots;
+
+    public HandInventorySlot itemHandSlot;
+
+
     public InventorySlot[] itemSlots;
 
     public Text itemNameText;
@@ -32,6 +40,17 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         RenderInventory();
+        AssingSlotIndexes();
+    }
+
+
+    public void AssingSlotIndexes()
+    {
+        for (int i = 0; i < toolSlots.Length; i++)
+        {
+            toolSlots[i].AssingInex(i);
+            itemSlots[i].AssingInex(i);
+        }
     }
 
    public void RenderInventory()
@@ -44,6 +63,9 @@ public class UIManager : MonoBehaviour
         RenderInventoryPanel(inventoryToolSlots, toolSlots);
 
         RenderInventoryPanel(inventoryItemSlots, itemSlots);
+
+        toolHandSlot.Display(InventoryManager.Instance.equippedTool);
+        itemHandSlot.Display(InventoryManager.Instance.equippedItem);
 
         ItemData equippedTool = InventoryManager.Instance.equippedTool; 
 

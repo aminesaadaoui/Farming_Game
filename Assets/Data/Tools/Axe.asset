@@ -16,4 +16,4 @@ MonoBehaviour:
   thumbnail: {fileID: 1363766796081087351, guid: 7ed15c24da27b04428e5778da555cc97,
     type: 3}
   gameModel: {fileID: 0}
-  toolType: 0
+  toolType: 2

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     ItemData itemToDisplay;
 
@@ -16,6 +16,8 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     }
 
     public InventoryType inventoryType;
+
+    int slotIndex;
 
     public void Display(ItemData itemToDisplay)
     {
@@ -34,9 +36,16 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 
 
-    public void OnPointerClick(PointerEventData eventData)
+    public virtual void OnPointerClick(PointerEventData eventData)
     {
+        InventoryManager.Instance.InventoryToHand(slotIndex, inventoryType);
 
+    }
+
+
+    public void AssingInex(int slotIndex)
+    {
+        this.slotIndex = slotIndex;
     }
    
 
