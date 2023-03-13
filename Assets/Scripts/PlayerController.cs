@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
         Interact();
 
-        if (Input.GetKey(KeyCode.RightBracket))
+        if (Input.GetKey(KeyCode.RightAlt))
         {
             TimeManager.Instance.Tick();
         }

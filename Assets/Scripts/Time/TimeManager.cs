@@ -17,7 +17,7 @@ public class TimeManager : MonoBehaviour
     public Transform sunTransfrom;
 
 
-    List<ITimeTracker> listeners;
+    List<ITimeTracker> listeners = new List<ITimeTracker> ();
 
 
     private void Awake()
@@ -42,8 +42,9 @@ public class TimeManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(1/timeScale);
             Tick();
+            yield return new WaitForSeconds(1 / timeScale);
+           
         }
         
     }
@@ -65,12 +66,17 @@ public class TimeManager : MonoBehaviour
     void UpdateSunMouvement()
     {
 
-        int timeInMinutes = GameTimestamp.HoursToMinute(timestamp.hour) + timestamp.minute;
+        int timeInMinutes = GameTimestamp.HoursToMinutes(timestamp.hour) + timestamp.minute;
 
         float sunAngle = .25f * timeInMinutes - 90;
 
         sunTransfrom.eulerAngles = new Vector3(sunAngle, 0, 0);
 
+    }
+
+    public GameTimestamp GetGameTimestamp()
+    {
+        return new GameTimestamp(timestamp); 
     }
 
 

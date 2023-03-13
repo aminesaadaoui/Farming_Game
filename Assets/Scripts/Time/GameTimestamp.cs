@@ -30,6 +30,8 @@ public class GameTimestamp
     public int hour;
     public int minute;
 
+   
+
     public GameTimestamp(int year, Season season, int day, int hour, int minute)
     {
         this.year = year;
@@ -39,12 +41,23 @@ public class GameTimestamp
         this.minute = minute;
     }
 
+    public GameTimestamp(GameTimestamp timestamp)
+    {
+        this.year = timestamp.year;
+        this.season = timestamp.season;
+        this.day = timestamp.day;
+        this.hour = timestamp.hour;
+        this.minute = timestamp.minute;
+
+    }
+
     public void UpdateClock()
     {
         minute++;
 
         if(minute >= 60)
         {
+            minute = 0;
             hour++;
         }
 
@@ -80,12 +93,12 @@ public class GameTimestamp
         return (DayOfTheWeek)daysIndex;
     }
 
-    public static  int HoursToMinute(int hour)
+    public static  int HoursToMinutes(int hour)
     {
         return hour * 60;
     }
 
-    public static int DaysTHours(int days)
+    public static int DaysToHours(int days)
     {
         return days * 24;
     }
@@ -98,6 +111,16 @@ public class GameTimestamp
     public static int YearsToDays(int years)
     {
         return years * 4 * 30;
+    }
+
+    public static int CompareTimestamps(GameTimestamp timestamp1, GameTimestamp timestamp2)
+    {
+        int timestamp1Hours = DaysToHours(YearsToDays(timestamp1.year)) + DaysToHours(SeasonsToDay(timestamp1.season)) + DaysToHours(timestamp1.day) + timestamp1.hour;  
+        int timestamp2Hours = DaysToHours(YearsToDays(timestamp2.year)) + DaysToHours(SeasonsToDay(timestamp2.season)) + DaysToHours(timestamp2.day) + timestamp2.hour;
+        int difference = timestamp1Hours - timestamp2Hours;
+        return Mathf.Abs(timestamp2Hours - timestamp1Hours);
+
+        
     }
         
 }
