@@ -8,4 +8,6 @@ public class SeedData : ItemData
     public int daysToGrow;
 
     public ItemData corpToYield;
+
+    public GameObject seedling;
 }
