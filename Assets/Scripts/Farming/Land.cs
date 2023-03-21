@@ -74,6 +74,11 @@ public class Land : MonoBehaviour, ITimeTracker
     {
         ItemData toolSlot = InventoryManager.Instance.equippedTool;
 
+        if(toolSlot == null) 
+        {
+            return; 
+        } 
+
         EquipmentData equipmentTool = toolSlot as EquipmentData;
 
         if(equipmentTool != null)
@@ -98,7 +103,7 @@ public class Land : MonoBehaviour, ITimeTracker
         if(seedTool != null && landStatus != LandStatus.Soil && cropPlanted == null)
         {
             GameObject cropObject = Instantiate(cropPrefab, transform); 
-            cropObject.transform.position = new Vector3(transform.position.x, 0.51f, transform.position.z);
+            cropObject.transform.position = new Vector3(transform.position.x, 0, transform.position.z);
 
             cropPlanted = cropObject.GetComponent<CropBehaviour>();
 
@@ -113,6 +118,12 @@ public class Land : MonoBehaviour, ITimeTracker
         {
             int hoursElapsed = GameTimestamp.CompareTimestamps(timeWatered, timestamp);
             Debug.Log(hoursElapsed + "hours since this was watered");
+
+
+            if(cropPlanted != null)
+            {
+                cropPlanted.Grow();
+            }
 
 
             if(hoursElapsed > 24)
