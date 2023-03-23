@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Land
+  - Item
+  - item
   layers:
   - Default
   - TransparentFX
@@ -14,8 +16,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Item
+  - Player
   - 
   - 
   - 

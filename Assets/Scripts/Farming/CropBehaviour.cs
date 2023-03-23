@@ -69,6 +69,8 @@ public class CropBehaviour : MonoBehaviour
                 break;
             case CropState.Harvestable:
                 harvestable.SetActive(true);
+                harvestable.transform.parent = null;
+                Destroy(gameObject);
                 break;
         }
 

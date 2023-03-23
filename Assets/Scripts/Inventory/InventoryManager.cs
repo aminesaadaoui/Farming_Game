@@ -25,6 +25,8 @@ public class InventoryManager : MonoBehaviour
     public ItemData[] items = new ItemData[8];
     public ItemData equippedItem = null;
 
+    public Transform handPoint;
+
 
     public void InventoryToHand(int slotIndex, InventorySlot.InventoryType inventoryType)
     {
@@ -36,6 +38,8 @@ public class InventoryManager : MonoBehaviour
             items[slotIndex] = equippedItem;
 
             equippedItem = itemToEquip;
+
+            RenderHand();
         }else
         {
             ItemData toolToEquip = tools[slotIndex];
@@ -47,6 +51,19 @@ public class InventoryManager : MonoBehaviour
         }
 
         UIManager.Instance.RenderInventory();
+    }
+
+    public void RenderHand()
+    {
+        if(handPoint.childCount > 0)
+        {
+            Destroy(handPoint.GetChild(0).gameObject);
+        }
+
+        if(equippedItem != null)
+        {
+            Instantiate(equippedItem.gameModel, handPoint);
+        }
     }
 
 
@@ -67,6 +84,7 @@ public class InventoryManager : MonoBehaviour
                     break;
                 }
             }
+            RenderHand();
         }
         else
         {

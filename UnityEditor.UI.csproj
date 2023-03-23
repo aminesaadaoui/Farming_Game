@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{FA50EBFF-65DF-B2FA-B4A5-D8B8FC11BA7D}</ProjectGuid>
+    <ProjectGuid>{38CB1D1C-CDD2-5021-BE5D-C58ED10B06BD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>UnityEditor.UI</AssemblyName>
@@ -289,7 +289,7 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.8f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>C:/Users/amine/Desktop/unity/farming/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>C:/Users/amine/Desktop/unity/Farming_Game/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.8f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -648,15 +648,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{2823F0A2-41D0-3506-377B-734917A959BA}</Project>
+      <Project>{7F6B9881-D307-9C79-4559-D08B03C735CE}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{668EE3DB-C391-F483-0B37-2011CAD07164}</Project>
+      <Project>{724D245E-877B-02FA-7A6F-BECC105F2166}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{CF6927EA-AA85-BB94-0ABA-625E57735482}</Project>
+      <Project>{F41BC437-CDCD-F26C-BB1B-0F90284D212B}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

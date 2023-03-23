@@ -8,6 +8,8 @@ public class PlayerInteraction : MonoBehaviour
 
     Land selectedLand = null;
 
+    InteractableObject selectedInteractable = null;
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +43,17 @@ public class PlayerInteraction : MonoBehaviour
             return;
         }
 
+        if(other.tag == "Item")
+        {
+            selectedInteractable = other.GetComponent<InteractableObject>();
+            return;
+        }
+
+        if(selectedInteractable != null)
+        {
+            selectedInteractable = null;
+        }
+
         if(selectedLand != null)
         {
             selectedLand.Select(false);
@@ -63,6 +76,11 @@ public class PlayerInteraction : MonoBehaviour
     public void Interact()
     {
 
+        if (InventoryManager.Instance.equippedItem != null)
+        {
+            return;
+        }
+
         if(selectedLand != null)
         {
             selectedLand.Interact();
@@ -70,6 +88,21 @@ public class PlayerInteraction : MonoBehaviour
         }
 
         UnityEngine.Debug.Log("not on any land!");
+    }
+
+
+    public void ItemInteract()
+    {
+        if(InventoryManager.Instance.equippedItem != null)
+        {
+            InventoryManager.Instance.HandToInventory(InventorySlot.InventoryType.Item);
+            return;
+        }
+
+        if(selectedInteractable != null)
+        {
+            selectedInteractable.Pickup();
+        }
     }
 
   

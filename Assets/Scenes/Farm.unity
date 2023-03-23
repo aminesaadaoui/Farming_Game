@@ -4327,6 +4327,7 @@ MonoBehaviour:
   - {fileID: 0}
   equippedTool: {fileID: 0}
   items:
+  - {fileID: 11400000, guid: 390556c823deca54f8ee1b37c052a770, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -4334,8 +4335,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  equippedItem: {fileID: 11400000, guid: 390556c823deca54f8ee1b37c052a770, type: 2}
+  equippedItem: {fileID: 0}
+  handPoint: {fileID: 5022664306279066877}
 --- !u!114 &1601592538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6138,3 +6139,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76741f1f130592947a61b83d0ed303b8, type: 3}
+--- !u!4 &5022664306279066877 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1492538660968913632, guid: 76741f1f130592947a61b83d0ed303b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 5022664306279066876}
+  m_PrefabAsset: {fileID: 0}

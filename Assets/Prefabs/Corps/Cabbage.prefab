@@ -55,7 +55,6 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
@@ -80,7 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8289148887857362819
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,10 +90,11 @@ GameObject:
   - component: {fileID: 3087499890980812981}
   - component: {fileID: 8712997190725166366}
   - component: {fileID: 8373419051993004191}
+  - component: {fileID: 5753959396122009896}
   - component: {fileID: 5723314326139808742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cabbage_01_LOD0
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,7 +136,6 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
@@ -162,7 +160,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5753959396122009896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8289148887857362819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f15156ffc6bc0b4e963dba190081134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 390556c823deca54f8ee1b37c052a770, type: 2}
 --- !u!64 &5723314326139808742
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -188,8 +198,8 @@ GameObject:
   - component: {fileID: 8554979865546078707}
   - component: {fileID: 2506295404697276759}
   m_Layer: 0
-  m_Name: Cabbage_01
-  m_TagString: Untagged
+  m_Name: Cabbage
+  m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
