@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Farming\CropBehaviour.cs" />
      <Compile Include="Assets\Scripts\Farming\Land.cs" />
+     <Compile Include="Assets\Scripts\Farming\RegrowableHarvestBehaviour.cs" />
      <Compile Include="Assets\Scripts\Inventory\EquipmentData.cs" />
      <Compile Include="Assets\Scripts\Inventory\InteractableObject.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />

@@ -34,6 +34,13 @@ public class CropBehaviour : MonoBehaviour
 
         maxGrowth = GameTimestamp.HoursToMinutes(hourstoGrow);
 
+        if (seedToGrow.regrowable)
+        {
+            RegrowableHarvestBehaviour regrowableHarvest = harvestable.GetComponent<RegrowableHarvestBehaviour>();
+
+            regrowableHarvest.SetParent(this);
+        }
+
         SwitchState(CropState.Seed);
     }
     public void Grow()
@@ -67,10 +74,15 @@ public class CropBehaviour : MonoBehaviour
             case CropState.Seedling:
                 seedling.SetActive(true);
                 break;
+
             case CropState.Harvestable:
                 harvestable.SetActive(true);
-                harvestable.transform.parent = null;
-                Destroy(gameObject);
+                if (!seedToGrow.regrowable)
+                {
+                    harvestable.transform.parent = null;
+                    Destroy(gameObject);
+                }
+               
                 break;
         }
 
@@ -78,5 +90,13 @@ public class CropBehaviour : MonoBehaviour
 
         cropState = stateToSwitch;
 
+    }
+
+
+    public void Regrow()
+    {
+        int hoursToRegrow = GameTimestamp.DaysToHours(seedToGrow.daysToRegrow);
+        growth = maxGrowth - GameTimestamp.HoursToMinutes(hoursToRegrow);
+        SwitchState(CropState.Seedling);
     }
 }
