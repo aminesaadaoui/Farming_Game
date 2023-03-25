@@ -4323,7 +4323,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f837ef4ca2b1422428bcecf7c6f37db4, type: 2}
   - {fileID: 11400000, guid: ebe326838c045ff4fbaadce5a663e351, type: 2}
   - {fileID: 11400000, guid: a71f0779212ac9c4fb97d4f388937fe8, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 22b022fd4dde9284ba84f78898005e0a, type: 2}
   - {fileID: 0}
   equippedTool: {fileID: 0}
   items:
