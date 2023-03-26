@@ -72,7 +72,7 @@ public class Land : MonoBehaviour, ITimeTracker
 
     public void Interact()
     {
-        ItemData toolSlot = InventoryManager.Instance.equippedTool;
+        ItemData toolSlot = InventoryManager.Instance.GetEquippedSlotItem(InventorySlot.InventoryType.Tool);
 
         if(toolSlot == null) 
         {
