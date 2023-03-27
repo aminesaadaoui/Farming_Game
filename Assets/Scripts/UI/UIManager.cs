@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour , ITimeTracker
     public static UIManager Instance { get; private set; }
     [Header("Status Bar")]
     public Image toolEquipSlot;
-
+    public Text toolQuantityText;
 
     public Text timeText;
     public Text dateText;
@@ -73,7 +73,9 @@ public class UIManager : MonoBehaviour , ITimeTracker
         toolHandSlot.Display(InventoryManager.Instance.GetEquippedSlot(InventorySlot.InventoryType.Tool));
         itemHandSlot.Display(InventoryManager.Instance.GetEquippedSlot(InventorySlot.InventoryType.Item));
 
-        ItemData equippedTool = InventoryManager.Instance.GetEquippedSlotItem(InventorySlot.InventoryType.Tool); 
+        ItemData equippedTool = InventoryManager.Instance.GetEquippedSlotItem(InventorySlot.InventoryType.Tool);
+
+        toolQuantityText.text = "";
 
         if (equippedTool != null)
         {
@@ -81,6 +83,13 @@ public class UIManager : MonoBehaviour , ITimeTracker
             
             toolEquipSlot.gameObject.SetActive(true);
 
+            int quantity = InventoryManager.Instance.GetEquippedSlot(InventorySlot.InventoryType.Tool).quantity;
+
+
+            if (quantity > 1)
+            {
+                toolQuantityText.text = quantity.ToString();
+            }
             return;
         }
         toolEquipSlot.gameObject.SetActive(false);
