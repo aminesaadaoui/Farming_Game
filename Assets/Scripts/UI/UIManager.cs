@@ -69,6 +69,11 @@ public class UIManager : MonoBehaviour , ITimeTracker
         fadeIn.SetActive(false);
 
     }
+
+    public void OnFadeOutComplete()
+    {
+        fadeOut.SetActive(false);
+    }
    
 
     #endregion

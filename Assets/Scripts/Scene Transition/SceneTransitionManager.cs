@@ -15,6 +15,8 @@ public class SceneTransitionManager : MonoBehaviour
 
     Transform playerPoint;
 
+    bool screenFadeOut;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -35,6 +37,23 @@ public class SceneTransitionManager : MonoBehaviour
     public void SwitchLocation(Location locationToSwitch)
     {
         UIManager.Instance.FadeOutScreen();
+        screenFadeOut = false;
+        StartCoroutine(ChangeScene(locationToSwitch));
+    }
+
+    IEnumerator ChangeScene(Location locationToSwitch)
+    {
+        while (!screenFadeOut)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+        SceneManager.LoadScene(locationToSwitch.ToString());
+        screenFadeOut = false;
+    }
+
+    public void OnFadeOutComplete()
+    {
+        screenFadeOut = true;   
     }
 
     public void OnLocationLoad(Scene scene, LoadSceneMode mode)
