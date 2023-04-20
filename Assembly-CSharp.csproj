@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\Inventory\ItemData.cs" />
      <Compile Include="Assets\Scripts\Inventory\ItemSlotData.cs" />
      <Compile Include="Assets\Scripts\Inventory\SeedData.cs" />
+     <Compile Include="Assets\Scripts\ParentedAnimationEvent.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerInteraction.cs" />
      <Compile Include="Assets\Scripts\Scene Transition\LocationEntryPoint.cs" />

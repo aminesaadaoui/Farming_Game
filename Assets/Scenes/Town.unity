@@ -1063,7 +1063,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1696331502}
   m_Layer: 0
-  m_Name: From Player Home
+  m_Name: From Farm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1076,13 +1076,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696331501}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.14, y: -0.343, z: 8.89}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.14, y: -0.343, z: 1.7000003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 734601735}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &1702433675 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4051301343721656, guid: d15f67cc54a3fd640ab20c8ba977b6c7,
@@ -1206,9 +1206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startPoints:
-  - enteringFrom: 2
-    playerStart: {fileID: 0}
-  - enteringFrom: 1
+  - enteringFrom: 0
     playerStart: {fileID: 1696331502}
 --- !u!4 &1759235321
 Transform:
@@ -1377,7 +1375,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983505306}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.087, y: 0, z: 7.53}
+  m_LocalPosition: {x: 0.087, y: 0, z: 11.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 734601735}
@@ -1395,7 +1393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 149c28fdc95cbe742972f7811a64c3a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  locationToSwitch: 1
+  locationToSwitch: 0
 --- !u!65 &1983505309
 BoxCollider:
   m_ObjectHideFlags: 0

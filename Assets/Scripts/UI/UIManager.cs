@@ -29,6 +29,10 @@ public class UIManager : MonoBehaviour , ITimeTracker
     public Text itemNameText;
     public Text itemDescriptionText;
 
+    [Header("Screen Transitions")]
+    public GameObject fadeIn;
+    public GameObject fadeOut;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -49,7 +53,25 @@ public class UIManager : MonoBehaviour , ITimeTracker
 
         TimeManager.Instance.RegisterTracker(this);
     }
+    #region Fadein Fadeout Transaction 
 
+    public void FadeOutScreen()
+    {
+        fadeOut.SetActive(true);
+    }
+
+    public void FadeInScreen()
+    {
+        fadeIn.SetActive(true); 
+    }
+    public void OnFadeInComplet()
+    {
+        fadeIn.SetActive(false);
+
+    }
+   
+
+    #endregion
 
     public void AssingSlotIndexes()
     {

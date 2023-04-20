@@ -34,7 +34,7 @@ public class SceneTransitionManager : MonoBehaviour
     }
     public void SwitchLocation(Location locationToSwitch)
     {
-        SceneManager.LoadScene(locationToSwitch.ToString());
+        UIManager.Instance.FadeOutScreen();
     }
 
     public void OnLocationLoad(Scene scene, LoadSceneMode mode)
