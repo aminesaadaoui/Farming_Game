@@ -2,14 +2,25 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraController
+    - CropBehaviour
     - EquipmentData
     - HandInventorySlot
+    - InteractableObject
     - InventoryManager
     - InventorySlot
     - ItemData
+    - ItemIndex
     - Land
+    - LandManager
+    - LocationEntryPoint
+    - LocationManager
+    - ParentedAnimationEvent
     - PlayerController
     - PlayerInteraction
+    - RegrowableHarvestBehaviour
+    - SceneTransitionManager
+    - SeedData
+    - TimeManager
     - UIManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -71,41 +82,63 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11152}
+      Script: {instanceID: 11136}
     - Class: 114
-      Script: {instanceID: 11318}
+      Script: {instanceID: 11138}
     - Class: 114
-      Script: {instanceID: 11358}
+      Script: {instanceID: 11156}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 11360}
     - Class: 114
-      Script: {instanceID: 11752}
+      Script: {instanceID: 11636}
     - Class: 114
-      Script: {instanceID: 11866}
+      Script: {instanceID: 11704}
     - Class: 114
-      Script: {instanceID: 11916}
+      Script: {instanceID: 11756}
+    - Class: 114
+      Script: {instanceID: 11872}
+    - Class: 114
+      Script: {instanceID: 11922}
     - Class: 114
       Script: {instanceID: 11928}
     - Class: 114
-      Script: {instanceID: 12034}
+      Script: {instanceID: 11930}
     - Class: 114
-      Script: {instanceID: 12092}
+      Script: {instanceID: 11938}
     - Class: 114
-      Script: {instanceID: 12094}
+      Script: {instanceID: 12038}
     - Class: 114
-      Script: {instanceID: 12156}
+      Script: {instanceID: 12046}
     - Class: 114
-      Script: {instanceID: 12336}
+      Script: {instanceID: 12104}
     - Class: 114
-      Script: {instanceID: 12654}
+      Script: {instanceID: 12106}
     - Class: 114
-      Script: {instanceID: 12826}
+      Script: {instanceID: 12144}
     - Class: 114
-      Script: {instanceID: 12928}
+      Script: {instanceID: 12172}
     - Class: 114
-      Script: {instanceID: 12966}
+      Script: {instanceID: 12348}
     - Class: 114
-      Script: {instanceID: 13018}
+      Script: {instanceID: 12354}
+    - Class: 114
+      Script: {instanceID: 12426}
+    - Class: 114
+      Script: {instanceID: 12540}
+    - Class: 114
+      Script: {instanceID: 12678}
+    - Class: 114
+      Script: {instanceID: 12850}
+    - Class: 114
+      Script: {instanceID: 12874}
+    - Class: 114
+      Script: {instanceID: 12954}
+    - Class: 114
+      Script: {instanceID: 12992}
+    - Class: 114
+      Script: {instanceID: 13048}
+    - Class: 114
+      Script: {instanceID: 13064}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -118,6 +151,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 205
+      Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
     - Class: 222
@@ -126,7 +161,89 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+    Assets/Scenes/PlayerHome.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11704}
+    - Class: 114
+      Script: {instanceID: 12874}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    Assets/Scenes/Town.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11704}
+    - Class: 114
+      Script: {instanceID: 12874}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: aeb62f729c52c814dec86c47dcac1471
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: 7ab0e790220bdca831fdd886b339039d
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GridLayoutGroup
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -177,12 +294,6 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: aeb62f729c52c814dec86c47dcac1471
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
-  - hash:
-      serializedVersion: 2
       Hash: 499fd23433e68e265d153aa6b95d0047
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -217,12 +328,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
-  - hash:
-      serializedVersion: 2
-      Hash: 7ab0e790220bdca831fdd886b339039d
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: GridLayoutGroup
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -279,6 +384,12 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: e825e63aacbcef3c184d1f0112025990
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CropBehaviour
+  - hash:
+      serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -289,6 +400,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 30ce41ca627f9573ca6cfbcb126b55d4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LocationManager
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -327,13 +444,25 @@ ScriptsOnlyBuild:
     className: ItemData
   - hash:
       serializedVersion: 2
-      Hash: d1c4220ef2d45f10282330e729a67dc6
+      Hash: f96dbfbdd32bb7b984392a445c7ebc3c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InventorySlot
   - hash:
       serializedVersion: 2
-      Hash: 4eb73a0e82a8137d78455e4c94d2b0be
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ParentedAnimationEvent
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LandManager
+  - hash:
+      serializedVersion: 2
+      Hash: 279bada36c8aebeb997db9242006b840
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InventoryManager
@@ -357,13 +486,19 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: f07b4e6a8e07d27e6753ee28eff9f92a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RegrowableHarvestBehaviour
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: 6ddcf8f863acb5ab438d1bd07bdf3bf2
+      Hash: 7fa8498136e23ad80aa57d9c9fa014b0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Land
@@ -375,7 +510,7 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: fea6cd693a25c4d97b38dac8f790d9bb
+      Hash: 3288a2ad376c9791a7c7d884694ac2cf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIManager
@@ -385,6 +520,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraController
+  - hash:
+      serializedVersion: 2
+      Hash: ca646a4ee95607b9ca38c698d5c23534
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ItemIndex
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -409,6 +550,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: f5c77f5f48880924dd1e1b75381d38c0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TimeManager
   - hash:
       serializedVersion: 2
       Hash: b0169741d6ca3c5243c26bafa3c00174
@@ -459,13 +606,19 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 7a1d7a446d569a5977a96c98872c33a7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneTransitionManager
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 1c534611968ed76a122b440964197786
+      Hash: 9285590347787d02cf882d488cc34742
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SeedData
@@ -507,10 +660,16 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: d1c4220ef2d45f10282330e729a67dc6
+      Hash: f96dbfbdd32bb7b984392a445c7ebc3c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HandInventorySlot
+  - hash:
+      serializedVersion: 2
+      Hash: 3d2925559279c75462e40e2e688197bd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LocationEntryPoint
   - hash:
       serializedVersion: 2
       Hash: 21d73eda81c18eacd2c91ad5dfaf2e32
@@ -597,6 +756,12 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
+      Hash: f07b4e6a8e07d27e6753ee28eff9f92a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InteractableObject
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -622,4 +787,6 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/Farm.unity
-  playerPath: C:/Users/amine/Desktop/unity/farming/edufarm.apk
+  - Assets/Scenes/PlayerHome.unity
+  - Assets/Scenes/Town.unity
+  playerPath: C:/Users/amine/Desktop/unity/Farming_Game/amine.apk

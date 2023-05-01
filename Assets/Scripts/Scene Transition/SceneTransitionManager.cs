@@ -47,8 +47,10 @@ public class SceneTransitionManager : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
         }
-        SceneManager.LoadScene(locationToSwitch.ToString());
         screenFadeOut = false;
+        UIManager.Instance.ResetFadeDefaults();
+        SceneManager.LoadScene(locationToSwitch.ToString());
+        
     }
 
     public void OnFadeOutComplete()

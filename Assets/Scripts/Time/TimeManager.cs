@@ -62,6 +62,23 @@ public class TimeManager : MonoBehaviour
 
     }
 
+    public void SkipTime(GameTimestamp timeToSkipTo)
+    {
+        int timeToSkipInMinutes = GameTimestamp.TimestampInMinutes(timeToSkipTo);
+        Debug.Log("time to skip " + timeToSkipInMinutes);
+        int timeNowInMinutes = GameTimestamp.TimestampInMinutes(timestamp);
+        Debug.Log("time now: " + timeNowInMinutes);
+
+        int differenceInMinutes = timeToSkipInMinutes - timeNowInMinutes;
+        Debug.Log(differenceInMinutes + "minutes will be advanced");
+
+        if (differenceInMinutes <= 0) return;
+        for(int i = 0; i < differenceInMinutes; i++)
+        {
+            Tick();
+        }
+
+    }
 
     void UpdateSunMouvement()
     {

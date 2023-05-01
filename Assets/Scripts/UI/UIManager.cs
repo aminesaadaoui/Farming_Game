@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour , ITimeTracker
+public class UIManager : MonoBehaviour, ITimeTracker
 {
     public static UIManager Instance { get; private set; }
     [Header("Status Bar")]
@@ -33,6 +33,10 @@ public class UIManager : MonoBehaviour , ITimeTracker
     public GameObject fadeIn;
     public GameObject fadeOut;
 
+    [Header("Yes No Prompt")]
+    public YesNoPrompt yesNoPrompt;
+
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -53,6 +57,13 @@ public class UIManager : MonoBehaviour , ITimeTracker
 
         TimeManager.Instance.RegisterTracker(this);
     }
+
+    public void TriggerYesNoPrompt(string message, System.Action OnYesCallback)
+    {
+        yesNoPrompt.gameObject.SetActive(true);
+        yesNoPrompt.CreatePrompt(message, OnYesCallback);
+    }
+
     #region Fadein Fadeout Transaction 
 
     public void FadeOutScreen()
@@ -62,7 +73,7 @@ public class UIManager : MonoBehaviour , ITimeTracker
 
     public void FadeInScreen()
     {
-        fadeIn.SetActive(true); 
+        fadeIn.SetActive(true);
     }
     public void OnFadeInComplet()
     {
@@ -70,13 +81,16 @@ public class UIManager : MonoBehaviour , ITimeTracker
 
     }
 
-    public void OnFadeOutComplete()
+    public void ResetFadeDefaults()
     {
         fadeOut.SetActive(false);
+        fadeIn.SetActive(true);
     }
-   
+
 
     #endregion
+
+    #region Inventory
 
     public void AssingSlotIndexes()
     {
@@ -87,7 +101,7 @@ public class UIManager : MonoBehaviour , ITimeTracker
         }
     }
 
-   public void RenderInventory()
+    public void RenderInventory()
     {
 
         ItemSlotData[] inventoryToolSlots = InventoryManager.Instance.GetInventorySlots(InventorySlot.InventoryType.Tool);
@@ -107,7 +121,7 @@ public class UIManager : MonoBehaviour , ITimeTracker
         if (equippedTool != null)
         {
             toolEquipSlot.sprite = equippedTool.thumbnail;
-            
+
             toolEquipSlot.gameObject.SetActive(true);
 
             int quantity = InventoryManager.Instance.GetEquippedSlot(InventorySlot.InventoryType.Tool).quantity;
@@ -130,18 +144,20 @@ public class UIManager : MonoBehaviour , ITimeTracker
         }
 
     }
+    #endregion
 
+    #region Time
 
     public void ToogleInventoryPanel()
     {
         inventoryPanel.SetActive(!inventoryPanel.activeSelf);
-       
+
         RenderInventory();
     }
 
     public void DisplayItemInfo(ItemData data)
     {
-        if(data == null)
+        if (data == null)
         {
             itemNameText.text = "";
             itemDescriptionText.text = "";
@@ -150,7 +166,7 @@ public class UIManager : MonoBehaviour , ITimeTracker
         }
 
         itemNameText.text = data.name;
-        itemDescriptionText.text = data.description;    
+        itemDescriptionText.text = data.description;
     }
 
     public void ClockUpdate(GameTimestamp timestamp)
@@ -163,11 +179,11 @@ public class UIManager : MonoBehaviour , ITimeTracker
 
         string prefix = "AM ";
 
-        if(hours > 12)
+        if (hours > 12)
         {
 
             prefix = "PM ";
-            hours-= 12;
+            hours -= 12;
         }
 
         timeText.text = prefix + hours + ":" + minutes.ToString("00");
@@ -176,7 +192,11 @@ public class UIManager : MonoBehaviour , ITimeTracker
         string season = timestamp.season.ToString();
         string dayOfTheWeek = timestamp.GetDayOfTheWeek().ToString();
 
-        dateText.text = season + " " + day + "(" + dayOfTheWeek +")";
+        dateText.text = season + " " + day + "(" + dayOfTheWeek + ")";
     }
+
+
+    #endregion
+
+
 }
- 
