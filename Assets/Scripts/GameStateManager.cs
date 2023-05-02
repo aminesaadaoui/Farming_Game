@@ -99,4 +99,19 @@ public class GameStateManager : MonoBehaviour , ITimeTracker
         screenFadeOut = true;
     }
 
+    public GameSaveState ExportSaveState()
+    {
+        List<LandSaveState> landData = LandManager.farmData.Item1;
+        List<CropSaveState> cropData = LandManager.farmData.Item2;
+
+        ItemSlotData[] toolSlots = InventoryManager.Instance.GetInventorySlots(InventorySlot.InventoryType.Tool);
+        ItemSlotData[] itemSlots = InventoryManager.Instance.GetInventorySlots(InventorySlot.InventoryType.Item);
+
+        ItemSlotData equippedToolSlot = InventoryManager.Instance.GetEquippedSlot(InventorySlot.InventoryType.Tool);
+        ItemSlotData equippedItemSlot = InventoryManager.Instance.GetEquippedSlot(InventorySlot.InventoryType.Item);
+
+        GameTimestamp timestamp = TimeManager.Instance.GetGameTimestamp();
+        return new GameSaveState(landData, cropData, toolSlots, itemSlots, equippedItemSlot, equippedToolSlot, timestamp);
+    }
+
 }

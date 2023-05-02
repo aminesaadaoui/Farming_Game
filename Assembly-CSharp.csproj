@@ -73,6 +73,7 @@
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerInteraction.cs" />
      <Compile Include="Assets\Scripts\Save\CropSaveState.cs" />
+     <Compile Include="Assets\Scripts\Save\GameSaveState.cs" />
      <Compile Include="Assets\Scripts\Save\LandSaveState.cs" />
      <Compile Include="Assets\Scripts\Scene Transition\LocationEntryPoint.cs" />
      <Compile Include="Assets\Scripts\Scene Transition\LocationManager.cs" />

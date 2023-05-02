@@ -84,7 +84,7 @@ public class UIManager : MonoBehaviour, ITimeTracker
     public void ResetFadeDefaults()
     {
         fadeOut.SetActive(false);
-        fadeIn.SetActive(true);
+        //fadeIn.SetActive(true);
     }
 
 
