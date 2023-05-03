@@ -74,7 +74,9 @@
      <Compile Include="Assets\Scripts\PlayerInteraction.cs" />
      <Compile Include="Assets\Scripts\Save\CropSaveState.cs" />
      <Compile Include="Assets\Scripts\Save\GameSaveState.cs" />
+     <Compile Include="Assets\Scripts\Save\ItemSlotSaveData.cs" />
      <Compile Include="Assets\Scripts\Save\LandSaveState.cs" />
+     <Compile Include="Assets\Scripts\Save\SaveManager.cs" />
      <Compile Include="Assets\Scripts\Scene Transition\LocationEntryPoint.cs" />
      <Compile Include="Assets\Scripts\Scene Transition\LocationManager.cs" />
      <Compile Include="Assets\Scripts\Scene Transition\SceneTransitionManager.cs" />

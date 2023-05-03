@@ -81,14 +81,15 @@ public class GameStateManager : MonoBehaviour , ITimeTracker
         timestampOnNextDay.hour = 6;
         timestampOnNextDay.minute = 0;
         Debug.Log(timestampOnNextDay.day + " " + timestampOnNextDay.hour + " : " + timestampOnNextDay.minute);
-        
+
         TimeManager.Instance.SkipTime(timestampOnNextDay);
 
         while (!screenFadeOut)
         {
             yield return new WaitForSeconds(1f);
         }
-
+       
+        SaveManager.Save(ExportSaveState());
         screenFadeOut = false;
         UIManager.Instance.ResetFadeDefaults();
 
@@ -112,6 +113,26 @@ public class GameStateManager : MonoBehaviour , ITimeTracker
 
         GameTimestamp timestamp = TimeManager.Instance.GetGameTimestamp();
         return new GameSaveState(landData, cropData, toolSlots, itemSlots, equippedItemSlot, equippedToolSlot, timestamp);
+    }
+
+    public void LoadSave()
+    {
+
+        SceneTransitionManager.Instance.SwitchLocation(SceneTransitionManager.Location.PlayerHome);
+
+
+        GameSaveState save = SaveManager.Load();
+       
+
+        TimeManager.Instance.LoadTime(save.timestamp);
+
+        ItemSlotData[] toolSlots =  ItemSlotData.DeserializeArray(save.toolSlots); 
+        ItemSlotData equippedToolSlot = ItemSlotData.DeserializeData(save.equippedToolSlot);
+        ItemSlotData[] itemSlots = ItemSlotData.DeserializeArray(save.itemSlots);
+        ItemSlotData equippedItemSlot = ItemSlotData.DeserializeData(save.equippedItemSlot); 
+        InventoryManager.Instance.LoadInventory(toolSlots , equippedToolSlot , itemSlots , equippedItemSlot);
+
+        LandManager.farmData = new System.Tuple<List<LandSaveState>, List<CropSaveState>>(save.landData, save.cropData);
     }
 
 }

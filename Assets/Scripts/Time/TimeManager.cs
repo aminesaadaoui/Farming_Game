@@ -38,6 +38,11 @@ public class TimeManager : MonoBehaviour
         StartCoroutine(TimeUpdate());
     }
 
+    public void LoadTime(GameTimestamp timestamp)
+    {
+        this.timestamp = new GameTimestamp(timestamp);
+    }
+
     IEnumerator TimeUpdate()
     {
         while (true)
@@ -107,6 +112,9 @@ public class TimeManager : MonoBehaviour
     {
         listeners.Remove(listener);
     }
+
+
+   
 
 
 

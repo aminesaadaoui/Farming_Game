@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class GameSaveState : MonoBehaviour
+public class GameSaveState 
 {
     public List<LandSaveState> landData;
     public List<CropSaveState> cropData;
 
 
-    public ItemSlotData[] toolSlots;
-    public ItemSlotData[] itemSlots;
+    public ItemSlotSaveData[] toolSlots;
+    public ItemSlotSaveData[] itemSlots;
     
     
-    public ItemSlotData equippedItemSlot;
-    public ItemSlotData equippedToolSlot;
+    public ItemSlotSaveData equippedItemSlot;
+    public ItemSlotSaveData equippedToolSlot;
 
     public GameTimestamp timestamp;
 
@@ -22,10 +22,14 @@ public class GameSaveState : MonoBehaviour
     {
         this.landData = landData;
         this.cropData = cropData;
-        this.toolSlots = toolSlots;
-        this.itemSlots = itemSlots;
-        this.equippedItemSlot = equippedItemSlot;
-        this.equippedToolSlot = equippedToolSlot;
+        this.toolSlots = ItemSlotData.SerializeArray(toolSlots);
+        this.itemSlots = ItemSlotData.SerializeArray(itemSlots);
+        this.equippedItemSlot = ItemSlotData.SerializeData(equippedItemSlot);
+        this.equippedToolSlot = ItemSlotData.SerializeData(equippedToolSlot);
         this.timestamp = timestamp;
     }
 }
+
+
+
+
