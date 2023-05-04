@@ -120,7 +120,6 @@ public class GameStateManager : MonoBehaviour , ITimeTracker
     public void LoadSave()
     {
 
-        SceneTransitionManager.Instance.SwitchLocation(SceneTransitionManager.Location.PlayerHome);
 
 
         GameSaveState save = SaveManager.Load();

@@ -45,4 +45,10 @@ public class SaveManager : MonoBehaviour
         return loadedSave;
     }
 
+
+    public static bool HasSave()
+    {
+        return File.Exists(FILEPATH);   
+    }
+
 }
