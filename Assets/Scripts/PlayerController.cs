@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private float moveSpeed = 4f;
 
+    private float gravity = 9.81f;
+
 
     [Header("Mouvement System")]
     public float walkSpeed = 4f;
@@ -68,6 +70,14 @@ public class PlayerController : MonoBehaviour
         Vector3 dir = new Vector3(horizontal, 0f, vertical).normalized;
         Vector3 velocity = moveSpeed * Time.deltaTime * dir;
 
+
+        if (controller.isGrounded)
+        {
+            velocity.y = 0;
+        }
+
+        velocity.y -= Time.deltaTime * gravity; 
+
         if (Input.GetButton("Sprint"))
         {
             moveSpeed = runSpeed;
@@ -88,7 +98,7 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        animator.SetFloat("Speed", velocity.magnitude);
+        animator.SetFloat("Speed", dir.magnitude);
 
 
     }

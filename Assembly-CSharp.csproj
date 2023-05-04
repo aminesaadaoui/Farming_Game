@@ -86,6 +86,7 @@
      <Compile Include="Assets\Scripts\Time\TimeManager.cs" />
      <Compile Include="Assets\Scripts\UI\HandInventorySlot.cs" />
      <Compile Include="Assets\Scripts\UI\InventorySlot.cs" />
+     <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
      <Compile Include="Assets\Scripts\UI\UIManager.cs" />
      <Compile Include="Assets\Scripts\UI\YesNoPrompt.cs" />
      <None Include="Assets\Imported assets\Cartoon_Farm_Crops\README.txt" />

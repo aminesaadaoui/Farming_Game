@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,7 @@ public class SceneTransitionManager : MonoBehaviour
 
     public Location currentLocation;
 
+    static readonly Location[] indoor = { Location.PlayerHome }; 
 
     Transform playerPoint;
 
@@ -34,6 +36,14 @@ public class SceneTransitionManager : MonoBehaviour
 
         playerPoint = FindObjectOfType<PlayerController>().transform;
     }
+
+    public bool CurrentlyIndoor()
+    {
+        return indoor.Contains(currentLocation);
+    }
+
+
+
     public void SwitchLocation(Location locationToSwitch)
     {
         UIManager.Instance.FadeOutScreen();
