@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\Farming\CropBehaviour.cs" />
      <Compile Include="Assets\Scripts\Farming\Land.cs" />
      <Compile Include="Assets\Scripts\Farming\LandManager.cs" />
+     <Compile Include="Assets\Scripts\Farming\ObstacleGenerator.cs" />
      <Compile Include="Assets\Scripts\Farming\RegrowableHarvestBehaviour.cs" />
      <Compile Include="Assets\Scripts\GameStateManager.cs" />
      <Compile Include="Assets\Scripts\Inventory\EquipmentData.cs" />

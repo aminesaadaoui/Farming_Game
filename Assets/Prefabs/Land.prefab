@@ -173,12 +173,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e1d6a7a45ee9e4c8ff485bedad3a93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   landStatus: 0
   soilMat: {fileID: 2100000, guid: b45719d338573e541ad23c1bc56ca3e7, type: 2}
   farmlandMat: {fileID: 2100000, guid: b6a5aab5bb8c8d845b01790652b7df14, type: 2}
   wateredMat: {fileID: 2100000, guid: 2e8d98e5ea5e5d44fa86e2f68a7b57d6, type: 2}
   select: {fileID: 5167167386223366212}
   cropPrefab: {fileID: 0}
+  obstacleStatus: 0
+  rockPrefab: {fileID: 9158721790945895257, guid: b8223c07aa75f484d8d423b46bf4d825,
+    type: 3}
+  woodPrefab: {fileID: 1119586604286860312, guid: a1fcca70d29d29a438f26bf11dd1460c,
+    type: 3}
+  weedsPrefab: {fileID: 7348385692735574055, guid: 091b2329901b0984a82042baed2b2e3b,
+    type: 3}
 --- !u!65 &6807278082738558125
 BoxCollider:
   m_ObjectHideFlags: 0

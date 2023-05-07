@@ -40566,6 +40566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1887109465}
   - component: {fileID: 1887109466}
+  - component: {fileID: 1887109467}
   m_Layer: 0
   m_Name: Framing Area
   m_TagString: Untagged
@@ -41047,6 +41048,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 218cf856c6cc2a249b68e21c18887ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1887109467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887109464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2f522c38f3cdf47a18ad4be918fad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  percentageFilled: 44
 --- !u!1001 &1891278807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47733,6 +47747,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -24.900024
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626817026072300814, guid: ec713e2aa78569b4390051e85f945893,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.51
       objectReference: {fileID: 0}
     - target: {fileID: 5717727218197444907, guid: ec713e2aa78569b4390051e85f945893,
         type: 3}
