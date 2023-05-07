@@ -93,15 +93,20 @@ public class PlayerInteraction : MonoBehaviour
 
     public void ItemInteract()
     {
-        if(InventoryManager.Instance.SlotEquipped(InventorySlot.InventoryType.Item))
-        {
-            InventoryManager.Instance.HandToInventory(InventorySlot.InventoryType.Item);
-            return;
-        }
+        
 
         if(selectedInteractable != null)
         {
             selectedInteractable.Pickup();
+        }
+    }
+
+    public void ItemKeep()
+    {
+        if (InventoryManager.Instance.SlotEquipped(InventorySlot.InventoryType.Item))
+        {
+            InventoryManager.Instance.HandToInventory(InventorySlot.InventoryType.Item);
+            return;
         }
     }
 

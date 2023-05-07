@@ -42,6 +42,7 @@ public class InventoryManager : MonoBehaviour
         this.equippedItemSlot = equippedItemSlot;
 
         UIManager.Instance.RenderInventory();
+        RenderHand();
 
     }
 
