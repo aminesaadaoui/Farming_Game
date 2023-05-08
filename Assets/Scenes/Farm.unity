@@ -47897,6 +47897,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shipping Bin
       objectReference: {fileID: 0}
+    - target: {fileID: 7420439965443840806, guid: 7c9ed40202b192c4eac995ff1266f753,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.279841
+      objectReference: {fileID: 0}
+    - target: {fileID: 7420439965443840806, guid: 7c9ed40202b192c4eac995ff1266f753,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.1399205
+      objectReference: {fileID: 0}
+    - target: {fileID: 7420439965443840806, guid: 7c9ed40202b192c4eac995ff1266f753,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.9982438
+      objectReference: {fileID: 0}
+    - target: {fileID: 7420439965443840806, guid: 7c9ed40202b192c4eac995ff1266f753,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.12967944
+      objectReference: {fileID: 0}
+    - target: {fileID: 7420439965443840806, guid: 7c9ed40202b192c4eac995ff1266f753,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.9607763
+      objectReference: {fileID: 0}
+    - target: {fileID: 7420439965443840806, guid: 7c9ed40202b192c4eac995ff1266f753,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.05949354
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c9ed40202b192c4eac995ff1266f753, type: 3}
 --- !u!1001 &7600816278428664549

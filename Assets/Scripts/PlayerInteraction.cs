@@ -93,8 +93,7 @@ public class PlayerInteraction : MonoBehaviour
 
     public void ItemInteract()
     {
-        
-
+       
         if(selectedInteractable != null)
         {
             selectedInteractable.Pickup();

@@ -11,7 +11,7 @@ public class ShippingBin : InteractableObject
     public override void Pickup()
     {
         ItemData handSlotItem = InventoryManager.Instance.GetEquippedSlotItem(InventorySlot.InventoryType.Item);
-        if (handSlotItem != null) return;
+        if (handSlotItem == null) return;
         UIManager.Instance.TriggerYesNoPrompt($"Do you want to sell {handSlotItem.name} ? ", PlaceItemsInShippingBin);
     }
 

@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
             playerInteraction.ItemKeep();
 
         }
-
+         
     }
 
     public void Move()
