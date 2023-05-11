@@ -36,6 +36,9 @@ public class UIManager : MonoBehaviour, ITimeTracker
     [Header("Yes No Prompt")]
     public YesNoPrompt yesNoPrompt;
 
+    [Header("Player Stats")]
+    public Text moneyText;
+
 
     private void Awake()
     {
@@ -53,9 +56,10 @@ public class UIManager : MonoBehaviour, ITimeTracker
     {
         RenderInventory();
         AssingSlotIndexes();
-
+        RenderPlayerStats();
 
         TimeManager.Instance.RegisterTracker(this);
+
     }
 
     public void TriggerYesNoPrompt(string message, System.Action OnYesCallback)
@@ -198,5 +202,10 @@ public class UIManager : MonoBehaviour, ITimeTracker
 
     #endregion
 
+
+    public void RenderPlayerStats()
+    {
+        moneyText.text = PlayerStats.Money + PlayerStats.CURRENCY; 
+    }
 
 }

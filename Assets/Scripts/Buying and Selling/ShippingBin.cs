@@ -23,6 +23,11 @@ public class ShippingBin : InteractableObject
         handSlot.Empty();
 
         InventoryManager.Instance.RenderHand();
+
+        foreach (ItemSlotData item in itemsToShip)
+        {
+            Debug.Log($" in the shipping bin : {item.itemData.name} * {item.quantity}");
+        }
     }
 
     public static void ShipItems()

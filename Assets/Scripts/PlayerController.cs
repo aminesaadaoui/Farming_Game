@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,13 +12,15 @@ public class PlayerController : MonoBehaviour
 
     private float gravity = 9.81f;
 
+    public FixedJoystick joystick;
+
 
     [Header("Mouvement System")]
     public float walkSpeed = 4f;
     public float runSpeed = 8f;
 
     PlayerInteraction playerInteraction;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -47,12 +50,12 @@ public class PlayerController : MonoBehaviour
 
     public void Interact()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (CrossPlatformInputManager.GetButtonDown("Plant"))
         {
             playerInteraction.Interact();
 
         }
-        if (Input.GetButtonDown("Fire2"))
+        if (CrossPlatformInputManager.GetButtonDown("Buy"))
         {
             playerInteraction.ItemInteract();
 
@@ -68,8 +71,13 @@ public class PlayerController : MonoBehaviour
     public void Move()
     {
 
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+       // float horizontal = Input.GetAxisRaw("Horizontal");
+       // float vertical = Input.GetAxisRaw("Vertical");ssss
+
+
+        float horizontal = joystick.Horizontal;
+        float vertical = joystick.Vertical;
+
 
 
         Vector3 dir = new Vector3(horizontal, 0f, vertical).normalized;
